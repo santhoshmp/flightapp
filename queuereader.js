@@ -1,0 +1,12 @@
+var Stomp = require('stomp-client');
+var destination = '/queue/fltInfo';
+var client = new Stomp('127.0.0.1', 61613, 'user', 'pass');
+
+client.connect(function(sessionId) {
+    var sub = client.subscribe(destination, function(body, headers) {
+      console.log('This is the body of a message on the subscribed queue:', body);
+
+    });
+
+        client.publish(destination, 'Oh herrow');
+});

@@ -1,0 +1,41 @@
+<div >
+      <!-- <strong>Data Length:</strong> {{ gridOptions.data.length | number }}
+      <br>
+      <br>
+      <div id="grid1" ui-grid="gridOptions" class="grid"></div> -->
+       <div class="table-responsive">
+       <!-- <table class="table"> -->
+        <table st-table="rowCollection" class="table table-striped">
+      <!-- <table class="table table-hover"> -->
+         <thead>
+      <tr>
+        <th>Flight </th>
+        <th>Flight Information</th>
+       </tr>
+      </thead>
+        <tbody>
+            <td>
+              <img src='a380.png'>
+            </td>
+            <td> 
+               <table st-table="rowCollection" class="table table-striped">
+                <thead>
+                <tr>
+                  <th>Flight </th>
+                  <th>Flight Information</th>
+                </tr>
+                </thead>
+                <tboby>
+                  <tr>
+                    <td>Aircraft Registration</td><td>{{ flight.aircraftRegistrationNumber }}</td></td>
+                  </tr>
+                  <tr>
+                    <td>Aircraft Model</td><td>{{flight.aircraftID}}</td></td>
+                  </tr>
+                </tboby>
+            </table>
+            </td>
+          </tbody>
+      </table>
+    </div>
+</div>
